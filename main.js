@@ -1,4 +1,6 @@
 const modelViewer = document.querySelector('#visor-ar');
+const musicaLira = new Audio('assets/lira_music.mp3'); 
+musicaLira.loop = true
 
 const modelos = {
     'venus_1': {
@@ -38,6 +40,16 @@ window.switchModel = (element, name) => {
     const slides = document.querySelectorAll(".slide");
     slides.forEach((el) => el.classList.remove("selected"));
     element.classList.add("selected");
+
+    //-- audio
+    if (name == 'venus_5'){
+        musicaLira.play().catch(error => {
+            console.warn("reproduccion bloqueada");
+        });       
+    } else {
+        musicaLira.pause();
+        musicaLira.currentTime = 0; // reiniciar
+    }
 };
 
 function switchScreen(screen) {

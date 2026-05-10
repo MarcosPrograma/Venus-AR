@@ -47,11 +47,11 @@ model-viewer {
 
 /* ----------------- Carrusel ----------------- */
 .slider {
-    width: 100%;
+    width: 100vw;
     text-align: center;
     overflow: hidden;
     position: absolute;
-    bottom: 4rem;
+    bottom: 4.5rem;
 }
 
 .slides {
@@ -62,13 +62,12 @@ model-viewer {
     -webkit-overflow-scrolling: touch;
     padding: 10px;
     gap: 15px;
-    justify-content: center;
 }
 
 .slide {
     Font-family: "Montserrat", sans-serif;
-    font-size: 10px;
     scroll-snap-align: start;
+    font-size: 10px;
     flex-shrink: 0;
     width: 6rem;
     height: 2.5rem;
