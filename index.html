@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+    <title>Polifonía de Venus</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <model-viewer 
+        id="visor-ar"
+        alt="Venus de Capua en estado original" 
+        src="assets/venus_1.glb" 
+        ar
+        ar-modes="scene-viewer webxr quick-look"
+        ar-placement="floor"
+        ar-scale="fixed" 
+        ar-status="not-presenting"
+        interaction-prompt="auto"
+        shadow-intensity="1"
+        camera-controls
+        skybox-height="2m"
+        disable-pan
+        disable-zoom
+        auto-rotate
+        min-camera-orbit="auto 90deg auto"
+        max-camera-orbit="auto 90deg auto"
+        touch-action="none"
+        bounds="tight">
+        <div class="slider">
+            <div class="slides">
+                <button class="slide selected" onclick="switchModel(this, 'venus_1')" style="background-image: url('assets/thumb-venus_1.webp');"></button>
+            </div>
+        </div>
+        <button slot="ar-button" id="ar-button" class="btn">Ver en Realidad Aumentada</button>
+    </model-viewer>
+    <script src="main.js"></script>
+</body>
+</html>

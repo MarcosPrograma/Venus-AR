@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  user-select: none;
+  overflow: hidden;
+  background-color: #dfbba4;
+}
+
+model-viewer {
+    padding: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ----------------- Boton ----------------- */
+.btn {
+    background-color: rgba(255, 0, 0, 0.548);
+    border-width: 2px;
+    border-radius: 2px;
+}
+
+#ar-button {
+    z-index: 2;
+    position: fixed;
+    top: 2rem; 
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    color: #191919;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* ----------------- Carrusel ----------------- */
+.slider {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    bottom: 4rem;
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px;
+    gap: 15px;
+    justify-content: center;
+}
+
+.slide {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+.slide.selected {
+    border: 2px solid #4285f4;
+    transform: scale(1.1);
+}
