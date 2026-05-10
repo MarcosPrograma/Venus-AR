@@ -32,7 +32,7 @@ model-viewer {
 
 #ar-button {
     Font-family: "Montserrat", sans-serif;
-    font-size: 13px;
+    font-size: 10px;
     z-index: 2;
     position: fixed;
     top: 2rem;
@@ -51,7 +51,7 @@ model-viewer {
     text-align: center;
     overflow: hidden;
     position: absolute;
-    bottom: 3rem;
+    bottom: 4rem;
 }
 
 .slides {
@@ -67,10 +67,10 @@ model-viewer {
 
 .slide {
     Font-family: "Montserrat", sans-serif;
-    font-size: 13px;
+    font-size: 10px;
     scroll-snap-align: start;
     flex-shrink: 0;
-    width: 8rem;
+    width: 6rem;
     height: 2.5rem;
     background-size: cover;
     background-repeat: no-repeat;
