@@ -41,7 +41,7 @@ window.switchModel = (element, name) => {
     slides.forEach((el) => el.classList.remove("selected"));
     element.classList.add("selected");
 
-    //-- audio
+    //audio
     if (name == 'venus_5'){
         musicaLira.play().catch(error => {
             console.warn("reproduccion bloqueada");
