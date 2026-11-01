@@ -1,0 +1,37 @@
+{
+  "venus_1": {
+    "titulo": "Calco de la Venus de Capua en estado original",
+    "descripcion": [
+      "Calco original en terracota de la Venus de Capua del acervo del Área de Museo, Exhibiciones y Conservación del Patrimonio de la Facultad de Artes de la Universidad Nacional de La Plata.",
+      "Le falta el antebrazo derecho."
+    ]
+  },
+  "venus_2": {
+    "titulo": "Calco de la Venus de Capua en estado reconstruida",
+    "descripcion": [
+      "Reconstrucción del antebrazo derecho del calco de la Venus de Capua por medio de impresión 3D",
+      "Esta práctica fue llevado a cabo por el equipo del Área de Museo, Exhibiciones y Conservación del Patrimonio, docentes y estudiantes de la Facultad de Artes de la Universidad Nacional de La Plata en los años 2017-2018"
+    ]
+  },
+  "venus_3": {
+    "titulo": "Discordia",
+    "descripcion": [
+      "Venus está indirectamente vinculada a la discordia a través del mito de la Manzana de la Discordia.",
+      "El juicio de Paris, donde Afrodita ofreció el amor a cambio de ser considerada la más bella, desencadenó la Guerra de Troya.",
+      "Así, Venus encarna tanto la belleza que inspira como el potencial destructivo del deseo y la competencia."
+    ]
+  },
+  "venus_4": {
+    "titulo": "Amor y Guerra",
+    "descripcion": [
+      "En la mitología grecorromana, Venus (Afrodita) mantiene una relación simbólica y a menudo adúltera con Marte (Ares), dios de la guerra.",
+      "Este emparejamiento representa la fusión de dos pasiones humanas opuestas: el amor y la guerra. Su unión dio origen a Cupido (Eros)."
+    ]
+  },
+  "venus_5": {
+    "titulo": "Música",
+    "descripcion": [
+      "En la astrología, las personas con posiciones fuertes de Venus suelen mostrar una gran apreciación por el arte, la música y la belleza, utilizando la armonía musical como una forma de expresar su naturaleza equilibradora y placentera."
+    ]
+  }
+}

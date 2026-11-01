@@ -30,19 +30,59 @@ const modelos = {
     },
 };
 
-window.switchModel = (element, name) => {
-    const modelo = modelos[name];
+let mitosData = {};
+let idActual = 'venus_1';
 
-    modelViewer.src = modelo.src;
-    modelViewer.alt = modelo.alt;
-    modelViewer.poster = modelo.poster;
+async function cargarMitosData() {
+    try {
+        const response = await fetch('data/mitos.json');
+        if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
+
+        mitosData = await response.json();
+        actualizarInfoPanel(idActual);
+    } catch (error) {
+        console.error("Error al cargar la información:", error);
+    }
+}
+
+function actualizarInfoPanel(id) {
+    const mito = mitosData[id];
+    if (!mito) {
+        console.warn(`No se encontraron datos en mitos.json: "${id}"`);
+        return;
+    }
+
+    const tituloEl = document.getElementById("panel-titulo");
+    const metaEl = document.getElementById("panel-meta");
+    const contenidoContenedor = document.getElementById("panel-contenido");
+
+    if (tituloEl) tituloEl.textContent = mito.titulo;
+
+    if (contenidoContenedor && Array.isArray(mito.descripcion)) {
+        contenidoContenedor.innerHTML = mito.descripcion
+            .map(parrafo => `<p>${parrafo}</p>`)
+            .join('');
+    }
+}
+
+window.switchModel = (element, id) => {
+    idActual = id;
+    const modelo = modelos[id];
+
+    if(modelo && modelViewer){
+        modelViewer.src = modelo.src;
+        modelViewer.alt = modelo.alt;
+        modelViewer.poster = modelo.poster;
+    }
 
     const slides = document.querySelectorAll(".slide");
     slides.forEach((el) => el.classList.remove("selected"));
     element.classList.add("selected");
 
+    actualizarInfoPanel(id);
+
     //audio
-    if (name == 'venus_5'){
+    if (id == 'venus_5'){
         musicaLira.play().catch(error => {
             console.warn("reproduccion bloqueada");
         });       
@@ -60,3 +100,27 @@ function switchScreen(screen) {
         console.warn("este dispositivo no es apto para realidad aumentada");
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    cargarMitosData();
+
+    const infoPanel = document.getElementById("info-panel");
+    const infoOverlay = document.getElementById("info-overlay");
+    const infoBtn = document.getElementById("info-button");
+    const closeBtn = document.getElementById("close-panel");
+
+    function openPanel() {
+        actualizarInfoPanel(idActual);
+        if (infoPanel) infoPanel.classList.add("visible");
+        if (infoOverlay) infoOverlay.classList.add("visible");
+    }
+
+    function closePanel() {
+        if (infoPanel) infoPanel.classList.remove("visible");
+        if (infoOverlay) infoOverlay.classList.remove("visible");
+    }
+
+    if (infoBtn) infoBtn.addEventListener("click", openPanel);
+    if (closeBtn) closeBtn.addEventListener("click", closePanel);
+    if (infoOverlay) infoOverlay.addEventListener("click", closePanel);
+});

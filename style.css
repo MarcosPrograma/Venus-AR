@@ -49,6 +49,31 @@ model-viewer {
     cursor: pointer;
 }
 
+#info-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 3px solid;
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+#info-button img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 /* ----------------- Boton ----------------- */
 .btn {
     background-color: rgba(255, 0, 0, 0.548);
@@ -122,4 +147,98 @@ model-viewer {
 .slide.selected {
     border: 4px solid #246ab2;
     transform: scale(1.1);
+}
+
+#info-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#info-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#info-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(18px);
+    padding: 3rem 20px 2rem 20px;
+    z-index: 4;
+    color: white;
+    line-height: 30px;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s ease;
+}
+
+#info-panel.visible {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+#info-panel::after {
+    content: "";
+    display: block;
+    height: 4rem;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-header h2 {
+    padding-top: 10px;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+#close-panel {
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 6px;
+    float: right;
+    transition: transform 0.2s ease;
+}
+
+#close-panel:active {
+    transform: scale(0.9);
+}
+
+#info-panel hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    margin: 0.75rem 0 1rem 0;
+}
+
+#info-panel h4 {
+    font-weight: 300;
+    color: #d1d1d1;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+#info-panel p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
 }

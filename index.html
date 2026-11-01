@@ -28,11 +28,27 @@
         </div>
         <button slot="ar-button" id="ar-button" class="btn">Ver en Realidad Aumentada</button>
     </model-viewer>
-    
+
+    <div id="info-overlay" class="hidden"></div>
+
+    <div id="info-panel" class="hidden">
+        <img src="src/cerrar.png" alt="Cerrar" id="close-panel">
+        <div class="panel-header">
+            <h2 id="panel-titulo"></h2>
+        </div>
+        <hr>
+        <h4 id="panel-meta"></h4>
+        <div id="panel-contenido"></div>
+    </div>
+
     <a href="https://www2.fba.unlp.edu.ar/areamuseo/" target="_blank" id="logo-link">
         <img src="src/logo.png" alt="Logo">
     </a>
-    
+
+    <div id="info-button">
+        <img src="src/informacion.png" alt="Info">
+    </div>
+
     <script src="main.js"></script>
 </body>
 
