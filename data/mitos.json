@@ -1,23 +1,28 @@
 {
   "venus_1": {
-    "titulo": "Calco de la Venus de Capua en estado original",
+    "titulo": "Original",
     "descripcion": [
       "Calco original en terracota de la Venus de Capua del acervo del Área de Museo, Exhibiciones y Conservación del Patrimonio de la Facultad de Artes de la Universidad Nacional de La Plata.",
-      "Le falta el antebrazo derecho."
+      "La obra es una reproducción elaborada por el atelier italiano Manifattura di Signa entre 1900 y 1920, la cual recrea la célebre estatua romana en mármol del siglo II d. C. hallada en el Anfiteatro Campano de Capua y atribuida al escultor griego Lisipo.",
+      "Le falta el antebrazo derecho a raíz de un accidente, evento del cual no quedaron registros materiales formalizados ni protocolos de restauración aplicados en su momento.",
+      "La figura exhibe una composición armónica en contrapposto con torsión helicoidal, donde la diosa Afrodita se alza semidesnuda con el torso al descubierto y la mirada dirigida hacia abajo, entre brazos que originalmente sostenían un objeto ausente como el escudo de Marte, una lira o una manzana."
     ]
   },
   "venus_2": {
-    "titulo": "Calco de la Venus de Capua en estado reconstruida",
+    "titulo": "Reconstrucción",
     "descripcion": [
-      "Reconstrucción del antebrazo derecho del calco de la Venus de Capua por medio de impresión 3D",
-      "Esta práctica fue llevado a cabo por el equipo del Área de Museo, Exhibiciones y Conservación del Patrimonio, docentes y estudiantes de la Facultad de Artes de la Universidad Nacional de La Plata en los años 2017-2018"
+      "Reconstrucción del antebrazo derecho del calco de la Venus de Capua por medio de impresión 3D y tecnología fotogramétrica.",
+      "Esta práctica fue llevada a cabo por el equipo del Área de Museo, Exhibiciones y Conservación del Patrimonio, junto con docentes, estudiantes de la Facultad de Artes de la UNLP y el Laboratorio de Software Libre para Arte y Diseño (SLAD) entre los años 2017 y 2018.",
+      "Para lograr la pieza se realizó la fotogrametría del brazo de una copia idéntica en la ciudad de Buenos Aires mediante Agisoft PhotoScan, combinada con un moldeo analógico en alginato del muñón lesionado para garantizar la escala correcta y el ajuste anatómico en Blender.",
+      "La prósis final fue impresa en cinco secciones de filamento PLA traslúcido ensambladas con imanes de neodimio de forma reversible e inocua, e incorporó posteriormente un sistema de retroiluminación secuencial programado con placa de Arduino y sensores de movimiento"
     ]
   },
   "venus_3": {
     "titulo": "Discordia",
     "descripcion": [
       "Venus está indirectamente vinculada a la discordia a través del mito de la Manzana de la Discordia.",
-      "El juicio de Paris, donde Afrodita ofreció el amor a cambio de ser considerada la más bella, desencadenó la Guerra de Troya.",
+      "Durante las bodas de Peleos y Tetis, Eris, diosa de la discordia, arrojó una manzana dorada dedicada a 'la más bella', lo que provocó una disputa entre Venus, Juno y Minerva.",
+      "El juicio de Paris, donde Afrodita ofreció el amor de la mujer más hermosa a cambio de ser considerada la más bella, desencadenó la Guerra de Troya.",
       "Así, Venus encarna tanto la belleza que inspira como el potencial destructivo del deseo y la competencia."
     ]
   },
@@ -25,13 +30,18 @@
     "titulo": "Amor y Guerra",
     "descripcion": [
       "En la mitología grecorromana, Venus (Afrodita) mantiene una relación simbólica y a menudo adúltera con Marte (Ares), dios de la guerra.",
-      "Este emparejamiento representa la fusión de dos pasiones humanas opuestas: el amor y la guerra. Su unión dio origen a Cupido (Eros)."
+      "Este emparejamiento representa la fusión de dos pasiones humanas opuestas: la atracción pacífica del amor y la fuerza destructiva de la guerra.",
+      "En la escultura de la Venus de Capua, la diosa sostiene el escudo de Marte para contemplar su propio reflejo, simbolizando el triunfo de la belleza sobre la violencia militar.",
+      "Su unión dio origen a Cupido (Eros), así como a otras deidades alegóricas como Harmonía y la pareja de la fobia y el terror (Deimos y Phobos)."
     ]
   },
   "venus_5": {
     "titulo": "Música",
     "descripcion": [
-      "En la astrología, las personas con posiciones fuertes de Venus suelen mostrar una gran apreciación por el arte, la música y la belleza, utilizando la armonía musical como una forma de expresar su naturaleza equilibradora y placentera."
+      "En la astrología grecorromana y renacentista, las personas con posiciones fuertes de Venus suelen mostrar una gran apreciación por el arte, la música y la belleza.",
+      "Las tradiciones neoplatónicas y astrológicas asocian a Venus con la regla del tono visual y auditivo, utilizando la armonía musical como una forma de expresar su naturaleza equilibradora y placentera.",
+      "En los textos poéticos y filosóficos del mundo clásico, la diada Venus-Cupido inspira el canto de los líricos y el orden armónico de las esferas celestes.",
+      "Asimismo, el mito de Venus y su hija Harmonía refleja la transición teórica entre la atracción amorosa y la consonancia de los sonidos musicales."
     ]
   }
 }
