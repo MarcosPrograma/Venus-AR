@@ -26,7 +26,14 @@
                 <button class="slide" onclick="switchModel(this, 'venus_5')">Música</button>
             </div>
         </div>
-        <button slot="ar-button" id="ar-button" class="btn">Ver en Realidad Aumentada</button>
+        <button slot="ar-button" id="ar-button" class="btn">
+            <svg class="ar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24" height="24"
+                fill="currentColor">
+                <path
+                    d="M480-120 200-272v-240L80-576v240l280 152 120-65.5V-120Zm40 0 v-129.5l120 65.5 280-152v-240L840-512v240L520-120ZM480-520l276-150-276-150-276 150 276 150Zm0 80L200-590l280-152 280 152-280 150Z" />
+            </svg>
+            <span>Ver en Realidad Aumentada</span>
+        </button>
     </model-viewer>
 
     <div id="info-overlay" class="hidden"></div>
